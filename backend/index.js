@@ -16,8 +16,10 @@ import mergedTypeDefs from "./typeDefs/index.js";
 
 import { buildContext } from "graphql-passport";
 import {connectDB} from "./db/connectDB.js";
+import { configurePassport } from "./passport/passport.config.js";
 
 dotenv.config();
+configurePassport();
 
 const app = express();
 const httpServer = http.createServer(app);
