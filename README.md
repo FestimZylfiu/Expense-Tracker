@@ -134,54 +134,7 @@ expense-tracker/
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 
-## 🐛 Known Issues & Fixes
 
-### TypeScript Import Errors
-If you see import errors for types, make sure to use explicit `/index` in imports:
-```typescript
-import { User } from '@/types/index';
-```
-
-### CORS Issues
-The backend is configured to accept requests from `http://localhost:3000`. Update the CORS settings in `backend/index.js` if using a different port.
-
-### MongoDB Connection
-Ensure MongoDB is running before starting the backend:
-```bash
-# For local MongoDB
-mongod
-```
-
-## 📊 GraphQL Schema
-
-The API includes:
-- **User Queries**: `authUser`, `user(userId)`
-- **Transaction Queries**: `transactions`, `transaction(transactionId)`, `categoryStatistics`
-- **User Mutations**: `signUp`, `login`, `logout`
-- **Transaction Mutations**: `createTransaction`, `updateTransaction`, `deleteTransaction`
-
-Access the GraphQL Playground at `http://localhost:4000/` when the server is running.
-
-## 🔐 Security
-
-- Passwords are hashed using bcryptjs
-- Sessions are stored in MongoDB
-- HTTP-only cookies for session management
-- CORS configured for frontend domain
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
-
-## 📝 License
-
-ISC
-
-## 👤 Author
 
 Your Name
 
