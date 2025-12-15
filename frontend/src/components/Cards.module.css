@@ -1,0 +1,42 @@
+.cardsContainer {
+  width: 100%;
+  padding: 0 2.5rem;
+  min-height: 40vh;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2.5rem 0;
+  color: white;
+}
+
+.cardsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: start;
+  margin-bottom: 5rem;
+}
+
+.emptyMessage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

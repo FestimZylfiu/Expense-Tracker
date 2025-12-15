@@ -1,0 +1,50 @@
+.notFound {
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  margin: auto;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.message {
+  font-size: 0.875rem;
+  color: #F6009B;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: transparent;
+  color: #F6009B;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 0.5rem 1rem;
+  border: 1px solid #F6009B;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: #F6009B;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .message {
+    font-size: 1rem;
+  }
+}

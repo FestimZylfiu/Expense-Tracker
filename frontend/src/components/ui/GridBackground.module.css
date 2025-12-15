@@ -1,0 +1,18 @@
+.gridBackground {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.overlay {
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 20%, black);
+}

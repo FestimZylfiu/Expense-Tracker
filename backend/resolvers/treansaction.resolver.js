@@ -67,18 +67,27 @@ const transactionResolver = {
 				throw new Error("Error updating transaction");
 			}
 		},
-		deleteTransaction: async (_, { transactionId }) => {
-			try {
-				const deletedTransaction = await Transaction.findByIdAndDelete(transactionId);
-				return deletedTransaction;
-			} catch (err) {
-				console.error("Error deleting transaction:", err);
-				throw new Error("Error deleting transaction");
-			}
-		},
+	deleteTransaction: async (_, { transactionId }) => {
+		try {
+			const deletedTransaction = await Transaction.findByIdAndDelete(transactionId);
+			return deletedTransaction;
+		} catch (err) {
+			console.error("Error deleting transaction:", err);
+			throw new Error("Error deleting transaction");
+		}
 	},
-
+},
+Transaction: {
+	user: async (parent) => {
+		try {
+			const user = await User.findById(parent.userId);
+			return user;
+		} catch (err) {
+			console.error("Error getting user in transaction resolver:", err);
+			throw new Error("Error getting user");
+		}
+	},
+},
 };
 
 export default transactionResolver;
-

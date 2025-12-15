@@ -1,0 +1,80 @@
+.radioButton {
+  display: inline-flex;
+  align-items: center;
+}
+
+.radioLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.radioInput {
+  position: relative;
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid #000;
+  color: #111827;
+  transition: all 0.3s;
+}
+
+.radioInput::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgb(96, 125, 139);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.radioInput:checked {
+  border-color: #111827;
+}
+
+.radioInput:checked::before {
+  background-color: #111827;
+}
+
+.radioInput:hover::before {
+  opacity: 0.1;
+}
+
+.radioCheckmark {
+  position: absolute;
+  color: #111827;
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radioInput:checked + .radioCheckmark {
+  opacity: 1;
+}
+
+.radioCheckmark svg {
+  height: 0.875rem;
+  width: 0.875rem;
+}
+
+.radioText {
+  margin-top: 0.125rem;
+  font-weight: 300;
+  color: #374151;
+  cursor: pointer;
+  user-select: none;
+}
